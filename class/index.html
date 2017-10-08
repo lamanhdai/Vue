@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VueJS Tutorials</title>
+  <link rel="stylesheet" href="styles.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <!-- output tất cả properties trong phạm vi component vue-app -->
+  <div id="vue-app">
+    <h1>Dynamic Css</h1>
+    <h2>Example 1</h2>
+    <!-- bật tắt class trong vue -->
+    <div v-bind:class="{is_active: is_active}" v-on:click="is_active = !is_active">
+      <p>Click to change color</p>
+    </div>
+    <h2>Example 2</h2>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

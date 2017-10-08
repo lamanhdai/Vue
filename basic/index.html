@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VueJS Tutorials</title>
+  <link rel="stylesheet" href="styles.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <!-- output tất cả properties trong phạm vi component vue-app -->
+  <div id="vue-app">
+    <!-- ví dụ 1: ví dụ đơn giản -->
+    <p> {{ job }}</p>
+
+    <!-- ví dụ 2: gọi hàm -->
+    <h1>{{ greet('Afternoon') }}</h1>
+
+    <!-- ví dụ 3: syntax đầu tiên directive bind - lấy url gán vào href thẻ a -->
+    <a v-bind:href="url">Search Vue</a><br>
+    
+    <!-- ví dụ 4: syntax ngắn directive bind - lấy url gán vào href thẻ a -->
+    <a :href="url">Search Vue</a><br>
+
+    <!-- ví dụ 5: directive bind - lấy name gán vào thuộc tính value của input -->
+    <input type="text" v-bind:value="name" /><br>
+
+    <!-- ví dụ 6: directive html - xuất nội dung có thẻ html -->
+    <p v-html="websiteTag"></p>
+
+    <!-- ví dụ 7: xử lý sự kiện bằng directive on -->
+    <button v-on:click="add(1)">Add 1</button>
+    <!-- cách viết ngắn của v-on -->
+    <!-- <button @click="add(1)">Add 1</button> -->
+    <button v-on:click="minus(1)">Minus 1</button>
+    <button v-on:dblclick="add(10)">Add 10</button>
+    <button v-on:dblclick="minus(10)">Minus 10</button>
+    <p>{{number}}</p>
+    
+    <!-- ví dụ 8: event mouse move -->
+    <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}</div>
+
+    <!-- điều khiển event -->
+    <!-- ví dụ 9: gọi 1 lần -->
+    <button v-on:click.once="add(1)">You only Add 1 first time</button>
+
+    <!-- ví dụ 10: ngăn chuyển trang khi click -->
+    <a v-bind:href="url" v-on:click.prevent="search()">search</a>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

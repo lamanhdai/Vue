@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VueJS Tutorials</title>
+  <link rel="stylesheet" href="styles.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <!-- output tất cả properties trong phạm vi component vue-app -->
+  <div id="vue-app">
+    <h1>Conditionals</h1>
+    <button v-on:click="red = !red">Toggle red</button>
+    <button v-on:click="blue = !blue">Toggle blue</button>
+    <!-- <p v-if="red"><span v-bind:class="{red: red}">red alert</span></p>
+    <p v-else-if="blue"><span v-bind:class="{blue :blue}">no alert</span></p> -->
+
+    <p v-show="red"><span v-bind:class="{red: red}">red alert</span></p>
+    <p v-show="blue"><span v-bind:class="{blue :blue}">no alert</span></p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

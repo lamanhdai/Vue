@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VueJS Tutorials</title>
+  <link rel="stylesheet" href="styles.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <!-- output tất cả properties trong phạm vi component vue-app -->
+  <div id="vue-app">
+    <h1>Two way binding</h1>
+    <label>Name</label>
+    <!-- directive v-model dùng cho two dât binding -->
+    <input type="text" v-model="name">
+    <p>{{name}}</p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
