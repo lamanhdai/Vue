@@ -10,7 +10,7 @@
           <span v-else>not yet</span>
         </p>
 
-        <p><button v-on:click="changeTitle(subject.name)">Get Subject</button></p>
+        <p><button v-on:click="updateHeader(subject.name)">Get Subject</button></p>
       </li>
     </ul>
     {{ testProps }}
@@ -18,8 +18,6 @@
 </template>
 
 <script>
-import { bus } from '../main';
-
 export default {
   props: {
     //thiets lập validation cho prop learning
@@ -28,16 +26,9 @@ export default {
       required: true
     }
   },
-  data() {
-    return {
-      services: ''
-    }
-  },
   methods: {
-    changeTitle: function(data){
-      this.services = data;
-      //hàm emit truyền dữ liệu
-      bus.$emit('serviceChanged', this.services);
+    updateHeader: function(subject){
+      this.$emit('changeHeader', subject);
     }
   },
   computed: {

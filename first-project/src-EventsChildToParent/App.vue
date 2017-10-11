@@ -1,7 +1,7 @@
 <template>
   <div>
-    <app-header></app-header>
-    <app-todo v-bind:learnings="learnings"></app-todo>
+    <app-header v-bind:headerTitle="title"></app-header>
+    <app-todo v-bind:learnings="learnings" v-on:changeHeader="change($event)"></app-todo>
     <app-footer></app-footer>
   </div>
 </template>
@@ -28,6 +28,9 @@ export default {
     }
   },
   methods: {
+    change: function(data){
+      this.title = data;
+    }
   }
 }
 </script>
