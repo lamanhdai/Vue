@@ -1,29 +1,29 @@
 <template>
   <div>
-    <app-header></app-header>
-    <app-todo v-bind:learnings="learnings"></app-todo>
-    <app-footer></app-footer>
+    <form-helper>
+      <div slot="form-header">
+        <h3>Contact form</h3>
+      </div>
+      <div slot="form-fields">
+        <input type="text" placeholder="name" required />
+        <input type="password" placeholder="password" required />
+      </div>
+      <div slot="form-controls">
+        <button @click="handleSubmit">Submit</button>
+      </div>
+    </form-helper>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
-import Todo from './components/Todo.vue'
+import formHelper from './components/formHelper.vue';
 
 export default {
   components: {
-    'app-header': Header,
-    'app-footer': Footer,
-    'app-todo': Todo,
+    'form-helper': formHelper
   },
   data() {
     return {
-      learnings: [
-        { name: 'React', priority: 'normal', finish: false},
-        { name: 'Vue', priority: 'high', finish: false},
-        { name: 'Bootstrap4', priority: 'high', finish: true}
-      ],
       title: ''
     }
   },
