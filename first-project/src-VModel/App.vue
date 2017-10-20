@@ -1,14 +1,12 @@
 <template>
-  <show-notification></show-notification>
+  <notification></notification>
 </template>
 
 <script>
 import Notification from './components/Notification.vue';
-import ShowNotification from './components/ShowNotification.vue';
 export default {
   components: {
-    'notification': Notification,
-    'show-notification': ShowNotification,
+    'notification': Notification
   },
   data() {
     return {
