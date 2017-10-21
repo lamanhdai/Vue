@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import searchMixin from '../mixins/SearchMixin';
 
 export default {
   components: {
@@ -29,6 +28,11 @@ export default {
     });
   },
   computed: {
+    filterSearch: function() {
+      return this.notifications.filter((noti) => {
+        return noti.title.match(this.search);
+      });
+    }
   },
   filters: {
     // Thay thế đăng ký filter phạm vi global ở file main.js
@@ -42,8 +46,7 @@ export default {
         el.style.color = "#" + Math.random().toString().slice(2 ,8);
       }
     }
-  },
-  mixins: [searchMixin],
+  }
 }
 </script>
 

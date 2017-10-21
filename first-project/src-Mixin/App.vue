@@ -1,7 +1,7 @@
 <template>
   <div>
-    <app-header></app-header>
-    <router-view></router-view>
+    <show-notification></show-notification>
+    <title-notification></title-notification>
   </div>
 </template>
 
@@ -9,13 +9,11 @@
 import Notification from './components/Notification.vue';
 import ShowNotification from './components/ShowNotification.vue';
 import TitleNotification from './components/TitleNotification.vue';
-import Header from './components/Header.vue';
 export default {
   components: {
     'notification': Notification,
     'show-notification': ShowNotification,
     'title-notification': TitleNotification,
-    'app-header': Header,
   },
   data() {
     return {

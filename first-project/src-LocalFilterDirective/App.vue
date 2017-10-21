@@ -1,21 +1,14 @@
 <template>
-  <div>
-    <app-header></app-header>
-    <router-view></router-view>
-  </div>
+  <show-notification></show-notification>
 </template>
 
 <script>
 import Notification from './components/Notification.vue';
 import ShowNotification from './components/ShowNotification.vue';
-import TitleNotification from './components/TitleNotification.vue';
-import Header from './components/Header.vue';
 export default {
   components: {
     'notification': Notification,
     'show-notification': ShowNotification,
-    'title-notification': TitleNotification,
-    'app-header': Header,
   },
   data() {
     return {

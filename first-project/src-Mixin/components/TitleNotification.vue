@@ -1,6 +1,6 @@
 <template>
   <div id="show-notification">
-    <h1>All Notifications</h1>
+    <h1>Title Notifications</h1>
     <input type="text" v-model="search" placeholder="Enter keyword">
     <div class="notification-item" v-for="item in filterSearch">
       <h2 v-rainbow>{{ item.title | short-title }}</h2>
@@ -14,6 +14,7 @@ import searchMixin from '../mixins/SearchMixin';
 
 export default {
   components: {
+
   },
   data() {
     return {
@@ -29,6 +30,7 @@ export default {
     });
   },
   computed: {
+
   },
   filters: {
     // Thay thế đăng ký filter phạm vi global ở file main.js
